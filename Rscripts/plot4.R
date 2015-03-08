@@ -31,8 +31,8 @@ plot(hpc$DateTime,hpc$Voltage,type="l", ylab="Voltage",xlab="datetime")
 #construct plot with sub metering 1 data
 plot(hpc$DateTime,hpc$Sub_metering_1,type="l", ylab="Energy sub metering",xlab="")
 #add data for sub metering 2 and 3
-points(hpc$DateTime,hpc$Sub_metering_2,type="l",col="red")
-points(hpc$DateTime,hpc$Sub_metering_3,type="l",col="blue")
+lines(hpc$DateTime,hpc$Sub_metering_2,col="red")
+lines(hpc$DateTime,hpc$Sub_metering_3,col="blue")
 
 #add a legend
 legend("topright", bty="n",c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),col=c("black","red","blue"),lty=c(1,1,1))
